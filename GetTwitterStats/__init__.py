@@ -13,7 +13,7 @@ def main(req: func.HttpRequest, twitterstats: func.Out[func.SqlRow]) -> func.Htt
     now = datetime.datetime.now()
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
-    # call the twitter api and save the data to the db
+    # call the twitter api and save the data to the database
     token = os.environ["TwitterToken"]
     r =requests.get("https://api.twitter.com/2/users/by?usernames=jpomfret&user.fields=created_at%2Cpublic_metrics", headers={"Authorization": "Bearer {}".format(token)})
     robj = r.json()
