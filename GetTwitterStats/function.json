@@ -8,11 +8,6 @@
       "direction": "in"
     },
     {
-      "name": "$return",
-      "type": "http",
-      "direction": "out"
-    },
-    {
       "name": "twitterstats",
       "type": "sql",
       "direction": "out",
