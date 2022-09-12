@@ -3,7 +3,7 @@
   "bindings": [
     {
       "schedule": "0 */10 * * * *",
-      "name": "daily at 0001",
+      "name": "every 10 mins",
       "type": "timerTrigger",
       "direction": "in"
     },
