@@ -3,7 +3,7 @@
   "bindings": [
     {
       "schedule": "*/1 * * * *",
-      "name": "every 10 mins",
+      "name": "everymin",
       "type": "timerTrigger",
       "direction": "in"
     },
