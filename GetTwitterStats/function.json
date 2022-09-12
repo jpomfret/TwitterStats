@@ -2,7 +2,7 @@
   "scriptFile": "__init__.py",
   "bindings": [
     {
-      "schedule": "0 1 0 * * *",
+      "schedule": "0 0 */1 * * *",
       "name": "everymin",
       "type": "timerTrigger",
       "direction": "in"
