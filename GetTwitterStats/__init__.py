@@ -5,7 +5,7 @@ import datetime
 import os
 import azure.functions as func
 
-def main(req: func.HttpRequest, twitterstats: func.Out[func.SqlRow]) -> func.HttpResponse:
+def main(twitterstats: func.Out[func.SqlRow]) -> func.HttpResponse:
     # Note that this expects the body to be a JSON object which
     # have a property matching each of the columns in the table to upsert to.
 
@@ -23,10 +23,4 @@ def main(req: func.HttpRequest, twitterstats: func.Out[func.SqlRow]) -> func.Htt
     row = func.SqlRow.from_dict(dbRow)
     twitterstats.set(row)
 
-    func.HttpResponse(f"Hello. This HTTP triggered function executed successfully.")
-
-    return func.HttpResponse(
-        body=req.get_body(),
-        status_code=201,
-        mimetype="application/json"
-    )
+    return func.HttpResponse(f"Hello. This HTTP triggered function executed successfully.")
