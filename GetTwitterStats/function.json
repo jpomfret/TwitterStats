@@ -2,7 +2,7 @@
   "scriptFile": "__init__.py",
   "bindings": [
     {
-      "schedule": "0 0 0 * * *",
+      "schedule": "0 */10 * * * *",
       "name": "daily at 0001",
       "type": "timerTrigger",
       "direction": "in"
