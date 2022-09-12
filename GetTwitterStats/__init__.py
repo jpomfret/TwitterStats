@@ -5,7 +5,7 @@ import datetime
 import os
 import azure.functions as func
 
-def main(everymin: func.TimerRequest, twitterstats: func.Out[func.SqlRow]) -> None:
+def main(timetrig: func.TimerRequest, twitterstats: func.Out[func.SqlRow]) -> None:
     # Note that this expects the body to be a JSON object which
     # have a property matching each of the columns in the table to upsert to.
 
