@@ -2,7 +2,7 @@
   "scriptFile": "__init__.py",
   "bindings": [
     {
-      "schedule": "*/10 * * * *",
+      "schedule": "*/1 * * * *",
       "name": "every 10 mins",
       "type": "timerTrigger",
       "direction": "in"
