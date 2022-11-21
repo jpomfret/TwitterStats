@@ -23,8 +23,8 @@ def main(timetrig: func.TimerRequest, twitterstats: func.Out[func.SqlRow]) -> No
     # call the mastadon api
     tokenMast = os.environ["MastadonToken"]
     rMast =requests.get("https://tech.lgbt/api/v1/accounts/109304329691833749/", headers={"Authorization": "Bearer {}".format(tokenMast)})
-    robjMast = rMast.json()
-    statsMast = robjMast[0]
+    statsMast = rMast.json()
+    #statsMast = robjMast[0]
 
     # save the data to the database
     dbRow = {'collectionDate': dt_string, 'name' : stats['name'], 'username': stats['username'], 'id': stats['id'], 'followersCount': stats['public_metrics']['followers_count'], 'followingCount': stats['public_metrics']['following_count'], 'tweetCount': stats['public_metrics']['tweet_count'], 'listedCount': stats['public_metrics']['listed_count'],'MastURL': statsMast['url'], 'MastUsername': statsMast['username'], 'MastFollowers': statsMast['followers_count'],'MastFollowing': statsMast['following_count'], 'MastStatusCount': statsMast['statuses_count']}
