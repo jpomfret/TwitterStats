@@ -11,7 +11,7 @@
       "name": "twitterstats",
       "type": "sql",
       "direction": "out",
-      "commandText": "[dbo].[stats_test]",
+      "commandText": "[dbo].[stats]",
       "connectionStringSetting": "SqlConnectionString"
     }
   ],
